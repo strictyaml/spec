@@ -1,0 +1,12 @@
+# Hitch environment and misc
+__pycache__
+hitch/gen
+temp/
+
+# Add editor specific ignores here
+.vscode/
+*.kate-swp
+
+# Add code specific ignores here
+__pycache__
+*.pyc
