@@ -29,17 +29,28 @@ def _parser():
     parser.ensure_built()
     return parser
 
-def _stories(parser):
-    return StoryCollection(pathquery(DIR.project / "examples").ext("story"), Engine(parser))
+
+def _stories(parser, rewrite=False):
+    return StoryCollection(
+        pathquery(DIR.project / "examples").ext("story"),
+        Engine(parser, rewrite=rewrite)
+    )
+
 
 @expected(HitchStoryException)
 def bdd(*keywords):
     """
     Run story with name containing keywords.
     """
-    _stories(_parser()).shortcut(
-        *keywords
-    ).play()
+    _stories(_parser()).shortcut(*keywords).play()
+
+
+@expected(HitchStoryException)
+def rbdd(*keywords):
+    """
+    Run story with name containing keywords.
+    """
+    _stories(_parser(), rewrite=True).shortcut(*keywords).play()
 
 
 @expected(HitchStoryException)
