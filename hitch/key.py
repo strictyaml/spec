@@ -1,8 +1,10 @@
 from hitchstory import StoryCollection, HitchStoryException
+from commandlib import CommandError
 from pathquery import pathquery
 from engine import Engine
 from hitchrun import DIR, expected
 import hitchbuildpy
+from path import Path
 
 
 class ReferenceParser(object):
@@ -15,11 +17,14 @@ class ReferenceParser(object):
             base_python=hitchbuildpy.PyenvBuild("3.7.0").with_build_path(
                 self._paths.share
             ),
-        ).with_build_path(self._paths.gen)
+        ).with_packages("ipython", "q").with_build_path(self._paths.gen)
         self._virtualenv.ensure_built()
     
     def lex_to_json(self, string):
-        return self._virtualenv.bin.python("lex.py", string).in_dir(DIR.project / "reference").output()
+        if Path("/tmp/lex").exists():
+            Path("/tmp/lex").remove()
+        self._virtualenv.bin.python("lex.py", string).in_dir(DIR.project / "reference").run()
+        return Path("/tmp/lex").text()
 
     
 
@@ -35,6 +40,7 @@ def _stories(parser, rewrite=False):
         pathquery(DIR.project / "examples").ext("story"),
         Engine(parser, rewrite=rewrite)
     )
+
 
 
 @expected(HitchStoryException)
@@ -59,3 +65,14 @@ def regression():
     Run all stories
     """
     _stories().ordered_by_name().play()
+
+
+@expected(CommandError)
+def rerun():
+    """
+    Rerun last example code block with specified version of python.
+    """
+    from commandlib import Command
+    Command(DIR.gen.joinpath("py{0}".format("3.7.0"), "bin", "python"))(
+        DIR.gen.joinpath("working", "examplepythoncode.py")
+    ).in_dir(DIR.gen.joinpath("working")).run()
