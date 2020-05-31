@@ -2,8 +2,10 @@ from re import compile
 
 
 LEXER_RULES = {
+    "COLONSPACE": compile(r"\:\s"),
     "COLON": compile(r"\:"),
     "TEXT": compile(r"([^\n\:]+)"),
+    "INDENT": compile(r"\n\s+"),
     "NEWLINE": compile(r"\n"),
 }
 

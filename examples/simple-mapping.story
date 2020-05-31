@@ -11,13 +11,13 @@ Simple mapping:
               "type": "TEXT"
           },
           {
-              "pos": 2,
-              "text": ":",
-              "type": "COLON"
+              "pos": 3,
+              "text": ": ",
+              "type": "COLONSPACE"
           },
           {
               "pos": 4,
-              "text": " b",
+              "text": "b",
               "type": "TEXT"
           },
           {
