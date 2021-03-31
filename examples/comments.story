@@ -10,4 +10,66 @@ Comments:
 
       # This is yet another comment
   steps:
-  - lexed as: x
+  - lexed as: |-
+      [
+          {
+              "pos": 19,
+              "text": "# This is a comment",
+              "type": "TEXT"
+          },
+          {
+              "pos": 21,
+              "text": "\n\n",
+              "type": "INDENT"
+          },
+          {
+              "pos": 22,
+              "text": "a",
+              "type": "TEXT"
+          },
+          {
+              "pos": 24,
+              "text": ": ",
+              "type": "COLONSPACE"
+          },
+          {
+              "pos": 43,
+              "text": "x # another comment",
+              "type": "TEXT"
+          },
+          {
+              "pos": 44,
+              "text": "\n",
+              "type": "NEWLINE"
+          },
+          {
+              "pos": 45,
+              "text": "b",
+              "type": "TEXT"
+          },
+          {
+              "pos": 47,
+              "text": ": ",
+              "type": "COLONSPACE"
+          },
+          {
+              "pos": 48,
+              "text": "c",
+              "type": "TEXT"
+          },
+          {
+              "pos": 50,
+              "text": "\n\n",
+              "type": "INDENT"
+          },
+          {
+              "pos": 79,
+              "text": "# This is yet another comment",
+              "type": "TEXT"
+          },
+          {
+              "pos": 80,
+              "text": "\n",
+              "type": "NEWLINE"
+          }
+      ]

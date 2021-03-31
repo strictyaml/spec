@@ -64,7 +64,7 @@ def regression():
     """
     Run all stories
     """
-    _stories().ordered_by_name().play()
+    _stories(_parser()).ordered_by_name().play()
 
 
 @expected(CommandError)
