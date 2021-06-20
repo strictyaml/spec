@@ -5,7 +5,7 @@ LEXER_RULES = {
     "COLONSPACE": compile(r"\:\s"),
     "COLON": compile(r"\:"),
     "TEXT": compile(r"([^\n\:]+)"),
-    "INDENT": compile(r"\n\s+"),
+    "INDENT": compile(r"^\s+"),
     "NEWLINE": compile(r"\n"),
 }
 

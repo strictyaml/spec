@@ -25,23 +25,23 @@ Multiline strings with pipe:
               "type": "TEXT"
           },
           {
-              "pos": 7,
-              "text": "\n  ",
-              "type": "INDENT"
+              "pos": 5,
+              "text": "\n",
+              "type": "NEWLINE"
           },
           {
               "pos": 17,
-              "text": "This is a ",
+              "text": "  This is a ",
               "type": "TEXT"
           },
           {
-              "pos": 20,
-              "text": "\n  ",
-              "type": "INDENT"
+              "pos": 18,
+              "text": "\n",
+              "type": "NEWLINE"
           },
           {
               "pos": 36,
-              "text": "multiline string",
+              "text": "  multiline string",
               "type": "TEXT"
           },
           {

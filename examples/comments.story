@@ -18,9 +18,14 @@ Comments:
               "type": "TEXT"
           },
           {
+              "pos": 20,
+              "text": "\n",
+              "type": "NEWLINE"
+          },
+          {
               "pos": 21,
-              "text": "\n\n",
-              "type": "INDENT"
+              "text": "\n",
+              "type": "NEWLINE"
           },
           {
               "pos": 22,
@@ -58,9 +63,14 @@ Comments:
               "type": "TEXT"
           },
           {
+              "pos": 49,
+              "text": "\n",
+              "type": "NEWLINE"
+          },
+          {
               "pos": 50,
-              "text": "\n\n",
-              "type": "INDENT"
+              "text": "\n",
+              "type": "NEWLINE"
           },
           {
               "pos": 79,

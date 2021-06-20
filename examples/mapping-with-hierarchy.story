@@ -35,13 +35,13 @@ Mapping with hierarchy:
               "type": "TEXT"
           },
           {
-              "pos": 27,
-              "text": "\n  ",
-              "type": "INDENT"
+              "pos": 25,
+              "text": "\n",
+              "type": "NEWLINE"
           },
           {
               "pos": 31,
-              "text": "from",
+              "text": "  from",
               "type": "TEXT"
           },
           {
