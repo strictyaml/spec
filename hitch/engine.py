@@ -28,6 +28,18 @@ class Engine(BaseEngine):
             else:
                 raise
 
+    @no_stacktrace_for(CommandError)
+    @no_stacktrace_for(AssertionError)
+    def parsed_as(self, example_json):
+        try:
+            Templex(example_json).assert_match(self._parser.parse_to_json(self.given['string']))
+        except AssertionError:
+            if self._rewrite:
+                self.current_step.update(example_json=self._parser.parse_to_json(self.given['string']))
+            else:
+                raise
+
+
     def tear_down(self):
         if self._rewrite:
             self.new_story.save()

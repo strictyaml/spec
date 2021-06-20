@@ -73,3 +73,14 @@ Comments:
               "type": "NEWLINE"
           }
       ]
+  - parsed as: |-
+      [
+          {
+              "text": "# This is a comment",
+              "type": "COMMENT"
+          },
+          {
+              "text": "# This is yet another comment",
+              "type": "COMMENT"
+          }
+      ]

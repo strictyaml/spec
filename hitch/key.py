@@ -25,6 +25,12 @@ class ReferenceParser(object):
             Path("/tmp/lex").remove()
         self._virtualenv.bin.python("lex.py", string).in_dir(DIR.project / "reference").run()
         return Path("/tmp/lex").text()
+    
+    def parse_to_json(self, string):
+        if Path("/tmp/parse").exists():
+            Path("/tmp/parse").remove()
+        self._virtualenv.bin.python("parse.py", string).in_dir(DIR.project / "reference").run()
+        return Path("/tmp/parse").text()
 
     
 

@@ -15,6 +15,14 @@ class Token(object):
         self.pos = pos
         self.tokentype = tokentype
         self.text = text
+    
+    
+    def __repr__(self):
+        return "<lex.Token: pos={}, type={}, text={}>".format(
+            self.pos,
+            self.tokentype,
+            self.text.__repr__(),
+        )
 
     def as_dict(self):
         return {
