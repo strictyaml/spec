@@ -5,8 +5,8 @@ Comments:
     string: |
       # This is a comment
 
-      a: x # another comment
-      b: c
+      key: a value # an inline comment
+      another key: value
 
       # This is yet another comment
   steps:
@@ -28,57 +28,57 @@ Comments:
               "type": "NEWLINE"
           },
           {
-              "pos": 22,
-              "text": "a",
-              "type": "TEXT"
-          },
-          {
               "pos": 24,
+              "text": "key",
+              "type": "TEXT"
+          },
+          {
+              "pos": 26,
               "text": ": ",
               "type": "COLONSPACE"
           },
           {
-              "pos": 43,
-              "text": "x # another comment",
+              "pos": 53,
+              "text": "a value # an inline comment",
               "type": "TEXT"
           },
           {
-              "pos": 44,
+              "pos": 54,
               "text": "\n",
               "type": "NEWLINE"
           },
           {
-              "pos": 45,
-              "text": "b",
+              "pos": 65,
+              "text": "another key",
               "type": "TEXT"
           },
           {
-              "pos": 47,
+              "pos": 67,
               "text": ": ",
               "type": "COLONSPACE"
           },
           {
-              "pos": 48,
-              "text": "c",
+              "pos": 72,
+              "text": "value",
               "type": "TEXT"
           },
           {
-              "pos": 49,
+              "pos": 73,
               "text": "\n",
               "type": "NEWLINE"
           },
           {
-              "pos": 50,
+              "pos": 74,
               "text": "\n",
               "type": "NEWLINE"
           },
           {
-              "pos": 79,
+              "pos": 103,
               "text": "# This is yet another comment",
               "type": "TEXT"
           },
           {
-              "pos": 80,
+              "pos": 104,
               "text": "\n",
               "type": "NEWLINE"
           }
