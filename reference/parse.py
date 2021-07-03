@@ -49,6 +49,8 @@ class StrictYAMLParser(object):
             if token.tokentype == "TEXT":
                 if token.text.startswith("#"):
                     toks.append(Node("COMMENT", token.text.rstrip("#")))
+                if token.text.startswith("-"):
+                    toks.append(Node("LI", token.text.lstrip("- ")))
                 else:
                     if not value_mode and current_node is None:
                         current_node = Node("KEY", token.text)

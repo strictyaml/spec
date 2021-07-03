@@ -55,18 +55,18 @@ Lists:
       [
           {
               "text": "a",
-              "type": "KEY",
-              "value": {
-                  "text": "- 1",
-                  "type": "VALUE"
-              }
-          },
-          {
-              "text": "- 2",
               "type": "KEY"
           },
           {
-              "text": "- 3",
-              "type": "KEY"
+              "text": "1",
+              "type": "LI"
+          },
+          {
+              "text": "2",
+              "type": "LI"
+          },
+          {
+              "text": "3",
+              "type": "LI"
           }
       ]
