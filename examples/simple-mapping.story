@@ -26,3 +26,14 @@ Simple mapping:
               "type": "NEWLINE"
           }
       ]
+  - parsed as: |-
+      [
+          {
+              "text": "a",
+              "type": "KEY",
+              "value": {
+                  "text": "b",
+                  "type": "VALUE"
+              }
+          }
+      ]

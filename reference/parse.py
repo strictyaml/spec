@@ -41,6 +41,8 @@ class StrictYAMLParser(object):
         current_node = None
         value_mode = False
         
+        node_stack = []
+        
         for token in self.lex_tokens:
             if token.tokentype == "NEWLINE":
                 line_position = 0
