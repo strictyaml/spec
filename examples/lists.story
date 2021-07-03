@@ -51,3 +51,22 @@ Lists:
               "type": "NEWLINE"
           }
       ]
+  - parsed as: |-
+      [
+          {
+              "text": "a",
+              "type": "KEY",
+              "value": {
+                  "text": "- 1",
+                  "type": "VALUE"
+              }
+          },
+          {
+              "text": "- 2",
+              "type": "KEY"
+          },
+          {
+              "text": "- 3",
+              "type": "KEY"
+          }
+      ]

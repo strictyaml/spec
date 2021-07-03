@@ -90,6 +90,22 @@ Comments:
               "type": "COMMENT"
           },
           {
+              "text": "key",
+              "type": "KEY",
+              "value": {
+                  "text": "a value # an inline comment",
+                  "type": "VALUE"
+              }
+          },
+          {
+              "text": "another key",
+              "type": "KEY",
+              "value": {
+                  "text": "value",
+                  "type": "VALUE"
+              }
+          },
+          {
               "text": "# This is yet another comment",
               "type": "COMMENT"
           }
