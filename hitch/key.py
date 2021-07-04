@@ -65,6 +65,12 @@ def rbdd(*keywords):
     _stories(_parser(), rewrite=True).shortcut(*keywords).play()
 
 
+def rewriteall():
+    """
+    Run all stories and rewrite any that have changed.
+    """
+    _stories(_parser(), rewrite=True).ordered_by_name().play()
+
 @expected(HitchStoryException)
 def regression():
     """

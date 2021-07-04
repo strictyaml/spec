@@ -15,19 +15,24 @@ Mapping with hierarchy:
               "type": "TEXT"
           },
           {
-              "pos": 6,
-              "text": ":\n",
-              "type": "COLONSPACE"
+              "pos": 5,
+              "text": ":",
+              "type": "COLON"
+          },
+          {
+              "pos": 8,
+              "text": "\n  ",
+              "type": "NL_INDENT"
           },
           {
               "pos": 15,
-              "text": "  surname",
+              "text": "surname",
               "type": "TEXT"
           },
           {
               "pos": 17,
               "text": ": ",
-              "type": "COLONSPACE"
+              "type": "COLON_SPACE"
           },
           {
               "pos": 24,
@@ -35,19 +40,19 @@ Mapping with hierarchy:
               "type": "TEXT"
           },
           {
-              "pos": 25,
-              "text": "\n",
-              "type": "NEWLINE"
+              "pos": 27,
+              "text": "\n  ",
+              "type": "NL_INDENT"
           },
           {
               "pos": 31,
-              "text": "  from",
+              "text": "from",
               "type": "TEXT"
           },
           {
               "pos": 33,
               "text": ": ",
-              "type": "COLONSPACE"
+              "type": "COLON_SPACE"
           },
           {
               "pos": 43,
@@ -57,6 +62,6 @@ Mapping with hierarchy:
           {
               "pos": 44,
               "text": "\n",
-              "type": "NEWLINE"
+              "type": "NL"
           }
       ]

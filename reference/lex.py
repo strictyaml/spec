@@ -1,13 +1,13 @@
 from re import compile
 
 
-LEXER_RULES = {
-    "COLONSPACE": compile(r"\:\s"),
-    "COLON": compile(r"\:"),
-    "TEXT": compile(r"([^\n\:]+)"),
-    "INDENT": compile(r"^\s+"),
-    "NEWLINE": compile(r"\n"),
-}
+LEXER_RULES = (
+    ("COLON_SPACE", compile(r"\: ")),
+    ("COLON", compile(r"\:")),
+    ("NL_INDENT", compile(r"\n\s+")),
+    ("TEXT", compile(r"([^\n\:]+)")),
+    ("NL", compile(r"\n")),
+)
 
 
 class Token(object):
@@ -41,7 +41,7 @@ class StrictYAMLLexer(object):
         if self.current_pos >= len(self.buf):
             return None
         else:            
-            for token_type, regex in LEXER_RULES.items():
+            for token_type, regex in LEXER_RULES:
                 match = regex.match(self.buf, self.current_pos)
                 if match:
                     self.current_pos = match.end()

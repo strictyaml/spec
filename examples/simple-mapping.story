@@ -13,7 +13,7 @@ Simple mapping:
           {
               "pos": 3,
               "text": ": ",
-              "type": "COLONSPACE"
+              "type": "COLON_SPACE"
           },
           {
               "pos": 4,
@@ -23,17 +23,8 @@ Simple mapping:
           {
               "pos": 5,
               "text": "\n",
-              "type": "NEWLINE"
+              "type": "NL"
           }
       ]
   - parsed as: |-
-      [
-          {
-              "text": "a",
-              "type": "KEY",
-              "value": {
-                  "text": "b",
-                  "type": "VALUE"
-              }
-          }
-      ]
+      []

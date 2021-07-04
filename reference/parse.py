@@ -42,27 +42,29 @@ class StrictYAMLParser(object):
         value_mode = False
         
         node_stack = []
+        key_stack = []
         
         for token in self.lex_tokens:
-            if token.tokentype == "NEWLINE":
-                line_position = 0
-                value_mode = False
+            if token.tokentype == "NL":
+                indent_level = 0
                 current_node = None
+                
+                
+
+            if token.tokentype == "NL_INDENT":
+                indent_level = len(token.text.lstrip("\n")) / 2
+                
+            
             if token.tokentype == "TEXT":
                 if token.text.startswith("#"):
                     toks.append(Node("COMMENT", token.text.rstrip("#")))
                 if token.text.startswith("-"):
                     toks.append(Node("LI", token.text.lstrip("- ")))
                 else:
-                    if not value_mode and current_node is None:
-                        current_node = Node("KEY", token.text)
-                        toks.append(current_node)
-                    
-                    if value_mode and current_node is not None:
-                        current_node.set_value(Node("VALUE", token.text))
+                    key_stack.append(token.text)
 
-            if token.tokentype == "COLONSPACE":
-                value_mode = True
+            if token.tokentype in ("COLON", "COLON_SPACE"):
+                key_stack.append(":")
                     
                     
         return toks

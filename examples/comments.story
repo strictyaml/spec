@@ -18,14 +18,9 @@ Comments:
               "type": "TEXT"
           },
           {
-              "pos": 20,
-              "text": "\n",
-              "type": "NEWLINE"
-          },
-          {
               "pos": 21,
-              "text": "\n",
-              "type": "NEWLINE"
+              "text": "\n\n",
+              "type": "NL_INDENT"
           },
           {
               "pos": 24,
@@ -35,7 +30,7 @@ Comments:
           {
               "pos": 26,
               "text": ": ",
-              "type": "COLONSPACE"
+              "type": "COLON_SPACE"
           },
           {
               "pos": 53,
@@ -45,7 +40,7 @@ Comments:
           {
               "pos": 54,
               "text": "\n",
-              "type": "NEWLINE"
+              "type": "NL"
           },
           {
               "pos": 65,
@@ -55,7 +50,7 @@ Comments:
           {
               "pos": 67,
               "text": ": ",
-              "type": "COLONSPACE"
+              "type": "COLON_SPACE"
           },
           {
               "pos": 72,
@@ -63,14 +58,9 @@ Comments:
               "type": "TEXT"
           },
           {
-              "pos": 73,
-              "text": "\n",
-              "type": "NEWLINE"
-          },
-          {
               "pos": 74,
-              "text": "\n",
-              "type": "NEWLINE"
+              "text": "\n\n",
+              "type": "NL_INDENT"
           },
           {
               "pos": 103,
@@ -80,7 +70,7 @@ Comments:
           {
               "pos": 104,
               "text": "\n",
-              "type": "NEWLINE"
+              "type": "NL"
           }
       ]
   - parsed as: |-
@@ -88,22 +78,6 @@ Comments:
           {
               "text": "# This is a comment",
               "type": "COMMENT"
-          },
-          {
-              "text": "key",
-              "type": "KEY",
-              "value": {
-                  "text": "a value # an inline comment",
-                  "type": "VALUE"
-              }
-          },
-          {
-              "text": "another key",
-              "type": "KEY",
-              "value": {
-                  "text": "value",
-                  "type": "VALUE"
-              }
           },
           {
               "text": "# This is yet another comment",

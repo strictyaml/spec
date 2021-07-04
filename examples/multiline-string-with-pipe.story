@@ -17,7 +17,7 @@ Multiline strings with pipe:
           {
               "pos": 3,
               "text": ": ",
-              "type": "COLONSPACE"
+              "type": "COLON_SPACE"
           },
           {
               "pos": 4,
@@ -25,28 +25,28 @@ Multiline strings with pipe:
               "type": "TEXT"
           },
           {
-              "pos": 5,
-              "text": "\n",
-              "type": "NEWLINE"
+              "pos": 7,
+              "text": "\n  ",
+              "type": "NL_INDENT"
           },
           {
               "pos": 17,
-              "text": "  This is a ",
+              "text": "This is a ",
               "type": "TEXT"
           },
           {
-              "pos": 18,
-              "text": "\n",
-              "type": "NEWLINE"
+              "pos": 20,
+              "text": "\n  ",
+              "type": "NL_INDENT"
           },
           {
               "pos": 36,
-              "text": "  multiline string",
+              "text": "multiline string",
               "type": "TEXT"
           },
           {
               "pos": 37,
               "text": "\n",
-              "type": "NEWLINE"
+              "type": "NL"
           }
       ]

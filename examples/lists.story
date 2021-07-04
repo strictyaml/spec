@@ -4,9 +4,9 @@ Lists:
   given:
     string: |
       a:
-      - 1
-      - 2
-      - 3
+        - 1
+        - 2
+        - 3
   steps:
   - lexed as: |-
       [
@@ -16,47 +16,48 @@ Lists:
               "type": "TEXT"
           },
           {
-              "pos": 3,
-              "text": ":\n",
-              "type": "COLONSPACE"
+              "pos": 2,
+              "text": ":",
+              "type": "COLON"
           },
           {
-              "pos": 6,
+              "pos": 5,
+              "text": "\n  ",
+              "type": "NL_INDENT"
+          },
+          {
+              "pos": 8,
               "text": "- 1",
               "type": "TEXT"
           },
           {
-              "pos": 7,
-              "text": "\n",
-              "type": "NEWLINE"
+              "pos": 11,
+              "text": "\n  ",
+              "type": "NL_INDENT"
           },
           {
-              "pos": 10,
+              "pos": 14,
               "text": "- 2",
               "type": "TEXT"
           },
           {
-              "pos": 11,
-              "text": "\n",
-              "type": "NEWLINE"
+              "pos": 17,
+              "text": "\n  ",
+              "type": "NL_INDENT"
           },
           {
-              "pos": 14,
+              "pos": 20,
               "text": "- 3",
               "type": "TEXT"
           },
           {
-              "pos": 15,
+              "pos": 21,
               "text": "\n",
-              "type": "NEWLINE"
+              "type": "NL"
           }
       ]
   - parsed as: |-
       [
-          {
-              "text": "a",
-              "type": "KEY"
-          },
           {
               "text": "1",
               "type": "LI"
